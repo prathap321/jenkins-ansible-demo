@@ -3,6 +3,7 @@
   gather_facts: true
   tasks:
   - name: copying the dir and contents
+    become: true
     copy:
      src: /var/www/html/html5-simple-personal-website
      dest: /var/www/html/
