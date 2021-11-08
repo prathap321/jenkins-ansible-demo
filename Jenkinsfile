@@ -1,5 +1,5 @@
  node{
-    stage('git_demo'){
+    stage('installing apache'){
      sh """
      echo "installing apache2"
      sudo apt update
