@@ -22,6 +22,8 @@
     }
     stage('ansible deployment'){
      sh """
+     sudo rm -rf jenkins-ansible-demo
+     sudo git clone https://github.com/prathap321/jenkins-ansible-demo.git
      ansible-playbook -i ./inventory.txt ansible_jenkins.yml -v
      """        
     }
