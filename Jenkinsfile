@@ -16,9 +16,13 @@
      pwd
      sudo rm -rf html5-simple-personal-website
      sudo git clone https://github.com/website-template/html5-simple-personal-website.git
-     sudo cp -r html5-simple-personal-website/* .
      ls 
      pwd
+     """        
+    }
+    stage('ansible deployment'){
+     sh """
+     ansible-playbook -i ./inventory.txt ansible_jenkins.yml -v
      """        
     }
  }             

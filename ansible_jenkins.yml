@@ -1,0 +1,12 @@
+---
+- hosts: instance1
+  gather_facts: true
+  tasks:
+  - name: copying the dir and contents
+    copy:
+     src: /var/www/html/html5-simple-personal-website
+     dest: /var/www/html/
+     owner: root
+     group: root
+     mode: 0644
+  
