@@ -24,7 +24,7 @@
      sh """
      sudo rm -rf jenkins-ansible-demo
      sudo git clone https://github.com/prathap321/jenkins-ansible-demo.git
-     ansible-playbook -i ./jenkins-ansible-demo/inventory.txt jenkins-ansible-demo/ansible_jenkins.yml -v
+     sudo ansible-playbook -i ./jenkins-ansible-demo/inventory.txt jenkins-ansible-demo/ansible_jenkins.yml -v
      """        
     }
  }             
