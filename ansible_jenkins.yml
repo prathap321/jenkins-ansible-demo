@@ -11,6 +11,7 @@
      group: root
      mode: 0644
   - name: updating index.html
+    become: true
     template:
       src: ./index.html.j2
       dest: /var/www/html/index.html
