@@ -1,7 +1,7 @@
  node{
     stage('installing apache'){
      sh """
-     echo "installing apache2"
+     echo "installing apache2 for checking"
      sudo apt update
      sudo apt install apache2 -y
      echo "instalation is completed"

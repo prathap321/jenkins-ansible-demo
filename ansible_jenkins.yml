@@ -1,6 +1,8 @@
 ---
 - hosts: instance1
   gather_facts: true
+  vars:
+    config_file: "{{ lookup('file','{{playbook_dir}}/config.json') | from_json }}"
   tasks:
   - name: copying the dir and contents
     become: true
@@ -10,4 +12,12 @@
      owner: root
      group: root
      mode: 0644
+  - name: updating index.html
+    become: true
+    template:
+      src: ./index.html.j2
+      dest: /var/www/html/index.html
+      mode: 0777
+    vars:
+     name: "{{ config_file.name }}"
   
