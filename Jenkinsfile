@@ -9,7 +9,7 @@
      pwd
      """
     }
-    stage('deploy application'){
+    stage('deploy application1'){
      sh """
      cd /var/www/html
      ls
